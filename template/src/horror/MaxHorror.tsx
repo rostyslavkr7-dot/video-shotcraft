@@ -1,9 +1,9 @@
-import { AbsoluteFill, Audio, Sequence, interpolate, random, staticFile, useCurrentFrame } from 'remotion';
+import { AbsoluteFill, Audio, Img, Sequence, interpolate, random, staticFile, useCurrentFrame } from 'remotion';
 
 /**
  * 9:16 true-story horror short (TikTok / Reels), Ukrainian on-screen narration.
  * Story: the Chicago broadcast signal intrusions of 22 Nov 1987 (WGN-TV 21:14,
- * WTTW ~23:15–23:20), never solved. Facts checked against UPI (24 Nov 1987),
+ * WTTW ~23:15), never solved. Facts checked against UPI (24 Nov 1987),
  * WGN-TV (2017), WTTW News (2017) and Wikipedia; sources are listed on the end card.
  *
  * Visuals are abstract: a generic masked silhouette, no footage from the real
@@ -16,56 +16,59 @@ export const HORROR_W = 1080;
 export const HORROR_H = 1920;
 
 type Mode = 'mask' | 'tv' | 'black' | 'towers' | 'file';
-/** visual track: what is on screen, frame ranges in order */
-export const HORROR_SCENES: { from: number; to: number; mode: Mode; osd?: string }[] = [
-  { from: 0, to: 75, mode: 'mask' },                          // hook flash
-  { from: 75, to: 240, mode: 'tv', osd: '22.11.1987  21:14' },
-  { from: 240, to: 285, mode: 'black', osd: '22.11.1987  21:14' },
-  { from: 285, to: 435, mode: 'mask', osd: '22.11.1987  21:14' },
-  { from: 435, to: 540, mode: 'tv', osd: '22.11.1987  21:15' },
-  { from: 540, to: 630, mode: 'black' },
-  { from: 630, to: 735, mode: 'tv', osd: '22.11.1987  23:18' },
-  { from: 735, to: 765, mode: 'black', osd: '22.11.1987  23:18' },
-  { from: 765, to: 930, mode: 'mask', osd: '22.11.1987  23:19' },
-  { from: 930, to: 1170, mode: 'towers' },
-  { from: 1170, to: 1410, mode: 'file' },
+/** visual track, timed to the voiceover (public/audio/horror/vo-uk.mp3, 80.7s) */
+export const HORROR_SCENES: { from: number; to: number; mode: Mode; osd?: string; label?: string }[] = [
+  { from: 0, to: 130, mode: 'mask' },                                                         // hook flash
+  { from: 130, to: 564, mode: 'tv', osd: '22.11.1987  21:14', label: 'ВЕЧІРНІ НОВИНИ · СПОРТ' },
+  { from: 564, to: 642, mode: 'black', osd: '22.11.1987  21:14' },
+  { from: 642, to: 927, mode: 'mask', osd: '22.11.1987  21:14' },
+  { from: 927, to: 1143, mode: 'tv', osd: '22.11.1987  21:15', label: 'ВЕЧІРНІ НОВИНИ · СПОРТ' },
+  { from: 1143, to: 1242, mode: 'black' },
+  { from: 1242, to: 1350, mode: 'tv', osd: '22.11.1987  23:15', label: 'ДОКТОР ХТО · СЕРІЯ 1' },
+  { from: 1350, to: 1365, mode: 'black', osd: '22.11.1987  23:15' },
+  { from: 1365, to: 1632, mode: 'mask', osd: '22.11.1987  23:16' },
+  { from: 1632, to: 1953, mode: 'towers' },
+  { from: 1953, to: 2475, mode: 'file' },
 ];
-export const HORROR_TOTAL = 1410; // 47s
+export const HORROR_TOTAL = 2475; // 82.5s = voiceover + 1.8s hold
 
 /** on-screen narration (Ukrainian). `*word*` = red accent */
 export const HORROR_CAPTIONS: { from: number; to: number; text: string }[] = [
-  { from: 4, to: 72, text: 'Цей ефір *так і не змогли* пояснити.' },
-  { from: 80, to: 160, text: 'Чикаго. Неділя, 22 листопада 1987 року.' },
-  { from: 160, to: 238, text: '21:14. Тисячі родин дивляться вечірні новини.' },
-  { from: 244, to: 284, text: 'Раптом екран *гасне.*' },
-  { from: 290, to: 345, text: 'А потім зʼявляється *він.*' },
-  { from: 345, to: 432, text: 'Гумова маска. Темні окуляри. Замість звуку — *гул.*' },
-  { from: 440, to: 538, text: 'Інженери перемикають частоту. Він зникає.' },
-  { from: 548, to: 628, text: 'Але ніч ще *не скінчилась.*' },
-  { from: 636, to: 732, text: 'Близько 23:15. Інший канал. Іде серія «Доктора Хто».' },
-  { from: 770, to: 840, text: 'Та сама маска. Тепер — *з голосом.*' },
-  { from: 840, to: 928, text: 'Півтори хвилини. Ніхто в студії *не може* його вимкнути.' },
-  { from: 936, to: 1050, text: 'Сигнал перехопили потужним *мікрохвильовим* передавачем.' },
-  { from: 1050, to: 1166, text: 'Федеральна комісія звʼязку почала розслідування. Нікого *не знайшли.*' },
-  { from: 1176, to: 1290, text: 'Строк давності сплив у 1992-му. Хто був під маскою — *досі невідомо.*' },
-  { from: 1290, to: 1404, text: 'Можливо, вони досі дивляться телевізор. *Як і ти.*' },
+  { from: 2, to: 126, text: 'Цей ефір *так і не змогли* пояснити.' },
+  { from: 132, to: 450, text: 'Чикаго. Неділя, 22 листопада 1987 року. *21:14.*' },
+  { from: 450, to: 560, text: 'Тисячі родин дивляться вечірні новини.' },
+  { from: 566, to: 640, text: 'Раптом екран *гасне.*' },
+  { from: 644, to: 726, text: 'А потім зʼявляється *він.*' },
+  { from: 730, to: 924, text: 'Гумова маска. Темні окуляри. Замість звуку — *гул.*' },
+  { from: 929, to: 1140, text: 'Інженери перемикають частоту. Він зникає.' },
+  { from: 1146, to: 1240, text: 'Але ніч ще *не скінчилась.*' },
+  { from: 1244, to: 1356, text: 'Близько 23:15. Інший канал. Іде серія «Доктора Хто».' },
+  { from: 1362, to: 1495, text: 'Та сама маска. Тепер — *з голосом.*' },
+  { from: 1498, to: 1630, text: 'Півтори хвилини. Ніхто в студії *не може* його вимкнути.' },
+  { from: 1634, to: 1775, text: 'Сигнал перехопили потужним *мікрохвильовим* передавачем.' },
+  { from: 1778, to: 1950, text: 'Федеральна комісія звʼязку почала розслідування. Нікого *не знайшли.*' },
+  { from: 1955, to: 2240, text: 'Строк давності сплив у 1992-му. Хто був під маскою — *досі невідомо.*' },
+  { from: 2244, to: 2475, text: 'Можливо, вони досі дивляться телевізор. *Як і ти.*' },
 ];
 
 const SFX: { from: number; src: string; volume: number; dur?: number }[] = [
-  { from: 0, src: 'horror/static.mp3', volume: 0.5 },
-  { from: 2, src: 'horror/buzz.mp3', volume: 0.35, dur: 70 },
-  { from: 75, src: 'horror/static.mp3', volume: 0.35 },
-  { from: 240, src: 'horror/hit.mp3', volume: 0.8 },
-  { from: 285, src: 'horror/static.mp3', volume: 0.5 },
-  { from: 288, src: 'horror/buzz.mp3', volume: 0.4, dur: 120 },
-  { from: 435, src: 'horror/static.mp3', volume: 0.45 },
-  { from: 540, src: 'horror/hit.mp3', volume: 0.7 },
-  { from: 735, src: 'horror/hit.mp3', volume: 0.8 },
-  { from: 765, src: 'horror/static.mp3', volume: 0.5 },
-  { from: 770, src: 'horror/garble.mp3', volume: 0.55, dur: 150 },
-  { from: 930, src: 'riser-cine.mp3', volume: 0.35 },
-  { from: 1170, src: 'impact-cine.mp3', volume: 0.6 },
-  { from: 1300, src: 'horror/static.mp3', volume: 0.3 },
+  { from: 0, src: 'horror/static.mp3', volume: 0.45 },
+  { from: 2, src: 'horror/buzz.mp3', volume: 0.2, dur: 120 },
+  { from: 130, src: 'horror/static.mp3', volume: 0.3 },
+  { from: 564, src: 'horror/hit.mp3', volume: 0.7 },
+  { from: 642, src: 'horror/static.mp3', volume: 0.45 },
+  { from: 646, src: 'horror/buzz.mp3', volume: 0.18, dur: 120 },
+  { from: 766, src: 'horror/buzz.mp3', volume: 0.18, dur: 120 },
+  { from: 927, src: 'horror/static.mp3', volume: 0.4 },
+  { from: 1143, src: 'horror/hit.mp3', volume: 0.65 },
+  { from: 1242, src: 'horror/static.mp3', volume: 0.35 },
+  { from: 1350, src: 'horror/hit.mp3', volume: 0.75 },
+  { from: 1365, src: 'horror/static.mp3', volume: 0.45 },
+  { from: 1370, src: 'horror/garble.mp3', volume: 0.2, dur: 150 },
+  { from: 1520, src: 'horror/garble.mp3', volume: 0.18, dur: 110 },
+  { from: 1632, src: 'riser-cine.mp3', volume: 0.3 },
+  { from: 1953, src: 'impact-cine.mp3', volume: 0.55 },
+  { from: 2244, src: 'horror/static.mp3', volume: 0.25 },
 ];
 
 const C = { red: '#e0262b', paper: '#e9e4d8', green: '#bfffc2' };
@@ -75,18 +78,18 @@ const clamp = { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' } as const;
 
 const sceneAt = (f: number) => HORROR_SCENES.find((s) => f >= s.from && f < s.to) ?? HORROR_SCENES[HORROR_SCENES.length - 1];
 
-/** Film grain via SVG turbulence; the seed changes every 2 frames (deterministic). */
+/** Film grain: 8 pre-rendered noise frames (public/textures/horror), cycled every
+ * 2 frames and jittered; overlay blend keeps mid-grey neutral. */
 const Grain: React.FC<{ opacity: number }> = ({ opacity }) => {
   const f = useCurrentFrame();
-  const seed = Math.floor(f / 2);
+  const i = Math.floor(f / 2) % 8;
+  const dx = Math.floor(random(`gx${f}`) * 40);
+  const dy = Math.floor(random(`gy${f}`) * 40);
   return (
-    <svg width={HORROR_W} height={HORROR_H} style={{ position: 'absolute', inset: 0, opacity, mixBlendMode: 'screen' }}>
-      <filter id={`g${seed}`}>
-        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed={seed} />
-        <feColorMatrix type="saturate" values="0" />
-      </filter>
-      <rect width="100%" height="100%" filter={`url(#g${seed})`} />
-    </svg>
+    <Img
+      src={staticFile(`textures/horror/grain${i}.png`)}
+      style={{ position: 'absolute', left: -dx, top: -dy, width: HORROR_W + 40, height: HORROR_H + 40, opacity: Math.min(1, opacity * 2.2), mixBlendMode: 'overlay', imageRendering: 'pixelated' }}
+    />
   );
 };
 
@@ -246,7 +249,8 @@ const CaseFile: React.FC<{ local: number }> = ({ local }) => {
 const Caption: React.FC<{ text: string; from: number; to: number }> = ({ text, from, to }) => {
   const f = useCurrentFrame();
   // typewriter reveal, then hold, then cut
-  const chars = Math.floor(interpolate(f, [from, from + Math.min(28, (to - from) * 0.45)], [0, text.length], clamp));
+  // reveal roughly at speaking pace, never slower than 60% of the window
+  const chars = Math.floor(interpolate(f, [from, from + Math.min(text.length * 1.5, (to - from) * 0.6)], [0, text.length], clamp));
   const shown = text.replace(/\*/g, '');
   let count = 0;
   const parts = text.split(/(\*[^*]+\*)/).filter(Boolean).map((p, i) => {
@@ -284,7 +288,9 @@ export const MaxHorror: React.FC = () => {
 
   return (
     <AbsoluteFill style={{ background: '#000', overflow: 'hidden' }}>
-      <Audio src={staticFile('audio/horror/drone.mp3')} volume={0.55} />
+      <Audio src={staticFile('audio/horror/drone.mp3')} volume={0.4} />
+      {/* voiceover: your own ElevenLabs export, saved as public/audio/horror/vo-uk.mp3 (git-ignored) */}
+      <Audio src={staticFile('audio/horror/vo-uk.mp3')} volume={1} />
       {SFX.map((s, i) => (
         <Sequence key={i} from={s.from} durationInFrames={s.dur ?? 75}>
           <Audio src={staticFile(`audio/${s.src}`)} volume={s.volume} />
@@ -293,7 +299,7 @@ export const MaxHorror: React.FC = () => {
 
       {/* picture, with RGB split on glitch */}
       <AbsoluteFill style={{ transform: `translateX(${shake}px)`, opacity: flicker, filter: `drop-shadow(${rgb}px 0 0 rgba(255,0,50,0.5)) drop-shadow(${-rgb}px 0 0 rgba(0,200,255,0.45))` }}>
-        {scene.mode === 'tv' && <NewsTV label={scene.from >= 630 ? 'ДОКТОР ХТО · СЕРІЯ 1' : 'ВЕЧІРНІ НОВИНИ · СПОРТ'} />}
+        {scene.mode === 'tv' && <NewsTV label={scene.label ?? ''} />}
         {scene.mode === 'mask' && (
           <>
             <StripeWall />
@@ -319,8 +325,8 @@ export const MaxHorror: React.FC = () => {
           ▶ PLAY&nbsp;&nbsp;{scene.osd}
         </div>
       ) : null}
-      {f >= 1300 ? (
-        <div style={{ position: 'absolute', left: 70, right: 70, top: 1440, textAlign: 'center', fontFamily: MONO, fontSize: 24, color: '#8a8a8a', opacity: interpolate(f, [1300, 1315], [0, 1], clamp) }}>
+      {f >= 2244 ? (
+        <div style={{ position: 'absolute', left: 70, right: 70, top: 1440, textAlign: 'center', fontFamily: MONO, fontSize: 24, color: '#8a8a8a', opacity: interpolate(f, [2244, 2260], [0, 1], clamp) }}>
           Реальна подія. Джерела: UPI (24.11.1987), WGN-TV, WTTW News (2017)
         </div>
       ) : null}
