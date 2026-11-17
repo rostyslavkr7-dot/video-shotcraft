@@ -114,7 +114,9 @@ export const SFX: { from: number; src: string; volume: number }[] = [
   { from: 1005, src: 'sparkle.mp3', volume: 0.3 }, // rule + tagline glint
 ];
 
-export const AiflMain: React.FC = () => {
+/** `captions={false}` drops the bottom narration strip so a wrapper (e.g. the
+ * 9:16 VerticalFilm) can set the same CAPTIONS in its own layout. */
+export const AiflMain: React.FC<{captions?: boolean}> = ({captions = true}) => {
   const theme = useVisualTheme();
   const paint = (css: string) => themePaint(theme, css);
   const asset = (src: string) => themeAsset(theme, src);
@@ -176,7 +178,7 @@ export const AiflMain: React.FC = () => {
         <SceneOutroLive />
       </Sequence>
       {/* narration captions over the live shots (under the flash cuts) */}
-      {CAPTIONS.map((c) => (
+      {captions && CAPTIONS.map((c) => (
         <Sequence key={c.from} from={c.from} durationInFrames={c.duration}>
           <Caption text={c.text} duration={c.duration} />
         </Sequence>

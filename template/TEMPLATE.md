@@ -8,6 +8,7 @@
 - 跑起来：`npm install && npx remotion studio src/index.ts`（预览）
   / `npx remotion render src/index.ts AiflPromo out/promo.mp4`（渲染）
 - 验收静帧：`npx remotion still src/index.ts AiflPromo out/qa/f150.png --frame=150`
+- 竖屏 9:16 版（TikTok / Reels / Shorts）：`npm run render:vertical`，见第六节
 
 ## 一、片子结构（src/aifl/Main.tsx 的 AIFL_SHOTS）
 
@@ -101,3 +102,25 @@ import，动效工作台据此把成片拆成多轨，见 ../references/workbenc
   `--props=props-nobgm.json`（内容 `{"bgm":false}`；Windows 内联 JSON
   会被 shell 剥引号，走文件）
 - 确定性渲染：无 Math.random/Date.now，一切伪随机用固定种子
+
+## 六、竖屏 9:16 版（TikTok / Instagram Reels / YouTube Shorts）
+
+第二个 composition `AiflPromoVertical`（1080×1920 @ 30fps，与横版同长同时间线），
+源码 `src/vertical/VerticalFilm.tsx`。它**不重做镜头**：横版 `AiflMain` 原样在画面中部的
+取景窗里播放（SFX、闪切、时长全部共用），所以横版改完，竖版自动跟着变。
+
+- 渲染：`npm run render:vertical` → `out/promo-vertical.mp4`；
+  静帧：`npx remotion still src/index.ts AiflPromoVertical out/qa/v150.png --frame=150`
+- 版式（`VERTICAL_LAYOUT`）：上方大标题带（钩子句 + 解说字幕）、中部 1080×810 取景窗、
+  下方留白。顶部约 140px、底部约 420px 是平台 UI（头像、按钮、文案）覆盖区，不放文字
+- 取景（`VERTICAL_FRAMING`）：每镜头一组 `{scale, cx, cy}`——`scale` 作用于 1920×1080
+  画面（0.75 = 填满窗高，0.5625 = 显示全宽），`cx/cy` 为焦点（0–1）。也可写成
+  `[{at, scale, cx, cy}, …]` 关键帧，在镜头内重新取景（例：开场先宽景保字标完整，
+  再推近主角卡）。**换产品后必须按新截图逐镜头重调**，字标镜头保证整词不被裁切
+- 字幕：横版底部通栏 CAPTIONS 在竖版里关闭（`AiflMain captions={false}`），改为上方
+  大号衬线标题，每条持续到下一条或下一张字卡，避免标题带闪空
+- 钩子：`VERTICAL_HOOK` 在开场品牌镜头上方显示——短视频前 2 秒决定留存，换产品时
+  写成一句直击痛点的话（`*词*` = 强调色）
+- 字卡：四张 PaperTitleCard 在竖版里全屏重排（`maxWidth` 收窄，字号 104）
+- 验收：每镜头至少出一帧竖版静帧，检查 UI 文字在手机尺寸可读、字标不裁切、
+  标题不进平台 UI 区；发布前按 ../references/publish-upload-post.md 选竖版文件

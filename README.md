@@ -158,6 +158,7 @@ drag in any of the 150 library shots, then export with Remotion. Preview and ren
 | Output | Details |
 |---|---|
 | Final film | `MP4`, 1920×1080, 30 fps, h264, with music and sound design |
+| Vertical cut | Template route: a 1080×1920 (9:16) version for TikTok, Reels and Shorts from the same timeline, with per-shot crops and a hook headline (`npm run render:vertical`, [details](template/TEMPLATE.md)) |
 | Remotion project | The full source of your film: every shot is a React component you or the agent can change |
 | Motion Workbench | Opens after delivery: tracks, inspector, retime, swap shots, export ([details](#motion-workbench)) |
 | JianYing draft | Optional: an editable JianYing (CapCut CN) project with per-shot clips, captions and audio tracks |

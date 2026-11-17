@@ -30,9 +30,10 @@ export UPLOAD_POST_USER=<profile 名>
 
 - **文件**：用交付的成片。配了 BGM 的片子有两版（带 BGM / 无 BGM），默认发
   **带 BGM 版**；用户另有要求按用户的来。
-- **画幅**：TikTok、Reels、Shorts 要竖屏 9:16。成片是横屏 16:9 时如实告诉用户
-  （这些平台会加黑边或裁切），建议改发 YouTube / LinkedIn / X / Facebook，或另渲
-  一版竖屏。
+- **画幅**：TikTok、Reels、Shorts 要竖屏 9:16。模板路线直接渲竖版
+  `npm run render:vertical`（composition `AiflPromoVertical`，见 template/TEMPLATE.md 第六节），
+  发这些平台用 `out/promo-vertical.mp4`，横版发 YouTube / LinkedIn / X / Facebook。
+  自由创作路线没有竖版时如实告诉用户（这些平台会加黑边或裁切），建议另渲一版竖屏。
 - **文案 `--title`**：在 TikTok / Instagram / X / Threads 上就是正文，按社交文案写
   （钩子一句 + 2–4 个话题标签），不要写成 YouTube 标题。含 YouTube 时 ≤100 字符。
   交付收尾第 1 条里用户若同意 @ 作者，把那句放进文案。

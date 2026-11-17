@@ -28,13 +28,15 @@ export const PaperTitleCard: React.FC<{
   accent?: string;
   muted?: string;
   paper?: string;
+  /** text column width (px); the 9:16 cut narrows it to keep side margins */
+  maxWidth?: number;
 }> = (props) => {
   const theme = useVisualTheme();
   const paperStyle = theme.id === 'ink-press';
   const paint = (css: string) => themePaint(theme, css);
   const SERIF = paperStyle ? 'ui-serif, Georgia, "Times New Roman", serif' : theme.font;
   const MONO = (paperStyle ? 'ui-monospace, SFMono-Regular, Menlo, monospace' : theme.font);
-  const {duration, words, sub, subDigits, ...style} = props;
+  const {duration, words, sub, subDigits, maxWidth = 1500, ...style} = props;
   const {fontSize, ink, accent, muted, paper} = {...sceneDefaults(theme, 'title-card', TITLE_CARD_DEFAULTS), ...style};
   const frame = useCurrentFrame();
   const fadeOut = interpolate(frame, [duration - 8, duration], [1, 0], {
@@ -61,7 +63,7 @@ export const PaperTitleCard: React.FC<{
         backgroundImage: paint('radial-gradient(1100px 750px at 50% 42%, oklch(99.3% 0.014 88 / 0.85), transparent 65%)'),
       }}
     >
-      <div style={{ textAlign: 'center', maxWidth: 1500 }}>
+      <div style={{ textAlign: 'center', maxWidth }}>
         <div
           style={{
             fontFamily: SERIF, fontSize, fontWeight: 600, lineHeight: 1.14,
