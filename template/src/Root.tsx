@@ -2,6 +2,7 @@ import { Composition } from 'remotion';
 import { AIFL_TOTAL } from './aifl/Main';
 import { ThemedFilm } from './themes/ThemedFilm';
 import { VerticalFilm, VERTICAL_W, VERTICAL_H } from './vertical/VerticalFilm';
+import { SerumPromo, SERUM_TOTAL, SERUM_FPS, SERUM_W, SERUM_H } from './serum/SerumPromo';
 
 export const Root: React.FC = () => {
   return (
@@ -24,6 +25,16 @@ export const Root: React.FC = () => {
         fps={30}
         width={VERTICAL_W}
         height={VERTICAL_H}
+      />
+      {/* 9:16 physical-product short (affiliate example, German copy) */}
+      <Composition
+        id="SerumPromo"
+        component={SerumPromo}
+        defaultProps={{}}
+        durationInFrames={SERUM_TOTAL}
+        fps={SERUM_FPS}
+        width={SERUM_W}
+        height={SERUM_H}
       />
     </>
   );

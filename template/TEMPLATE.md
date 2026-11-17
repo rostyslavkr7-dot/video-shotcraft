@@ -124,3 +124,19 @@ import，动效工作台据此把成片拆成多轨，见 ../references/workbenc
 - 字卡：四张 PaperTitleCard 在竖版里全屏重排（`maxWidth` 收窄，字号 104）
 - 验收：每镜头至少出一帧竖版静帧，检查 UI 文字在手机尺寸可读、字标不裁切、
   标题不进平台 UI 区；发布前按 ../references/publish-upload-post.md 选竖版文件
+
+## 七、实物产品竖屏短片 `SerumPromo`（联盟推广示例，德语文案）
+
+`src/serum/SerumPromo.tsx`：1080×1920 @ 30fps，540 帧（18s），五段——钩子 → 成分 → 用法 →
+卖点徽章 → 评分 + CTA。没有页面截图，产品居中，文案围绕它搭建。
+
+- 渲染：`npx remotion render src/index.ts SerumPromo out/serum-promo-de.mp4`
+- 文案全部在 `SERUM_COPY`（`*词*` = 琥珀斜体强调）；换产品只改这里和 `SERUM_SCENES`
+- 产品图：默认是代码绘制的中性滴管瓶（`Bottle.tsx`，刻意不仿任何品牌标签）。
+  自己拍的产品照放进 `public/`，用 `--props='{"productImage":"product.png"}'` 替换（透明底 PNG 最佳）。
+  联盟推广**不要**直接下载/改用电商平台的商品图（平台条款通常禁止）
+- 合规默认值：全程 “Werbung” 标签（德国广告标识要求）；结尾 Amazon 联盟披露句；
+  评分带 “Stand” 日期；只用化妆品措辞（护理、外观、成分），不写“治疗脱发 / 替代米诺地尔”
+  之类功效承诺——欧盟化妆品法规与 TikTok / Meta 广告政策都会拒绝
+- 无 BGM：发布时在 TikTok / Instagram 内选热门音乐，SFX 已钉在动作上
+- 所有文字在顶部 ~140px 与底部 ~420px 平台 UI 区之外
