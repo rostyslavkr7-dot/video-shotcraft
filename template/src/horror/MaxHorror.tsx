@@ -16,60 +16,60 @@ export const HORROR_W = 1080;
 export const HORROR_H = 1920;
 
 type Mode = 'mask' | 'tv' | 'black' | 'towers' | 'file';
-/** visual track, timed to the voiceover (public/audio/horror/vo-uk.mp3, 84.3s) */
+/** visual track, timed to the voiceover (public/audio/horror/vo-uk.mp3: the 84.3s ElevenLabs take sped up to 1.15× = 73.3s) */
 export const HORROR_SCENES: { from: number; to: number; mode: Mode; osd?: string; label?: string }[] = [
-  { from: 0, to: 130, mode: 'mask' },                                                          // hook flash
-  { from: 130, to: 543, mode: 'tv', osd: '22.11.1987  21:14', label: 'ВЕЧІРНІ НОВИНИ · СПОРТ' },
-  { from: 543, to: 680, mode: 'black', osd: '22.11.1987  21:14' },                              // «Раптом… екран гасне»
-  { from: 680, to: 948, mode: 'mask', osd: '22.11.1987  21:14' },                               // «…зʼявляється він»
-  { from: 948, to: 1080, mode: 'tv', osd: '22.11.1987  21:15', label: 'ВЕЧІРНІ НОВИНИ · СПОРТ' },
-  { from: 1080, to: 1191, mode: 'black' },                                                      // «Але ніч…»
-  { from: 1191, to: 1383, mode: 'tv', osd: '22.11.1987  23:15', label: 'ДОКТОР ХТО · СЕРІЯ 1' },
-  { from: 1383, to: 1398, mode: 'black', osd: '22.11.1987  23:15' },
-  { from: 1398, to: 1719, mode: 'mask', osd: '22.11.1987  23:16' },                             // «Та сама маска»
-  { from: 1719, to: 2025, mode: 'towers' },
-  { from: 2025, to: 2580, mode: 'file' },
+  { from: 0, to: 113, mode: 'mask' },                                                          // hook flash
+  { from: 113, to: 472, mode: 'tv', osd: '22.11.1987  21:14', label: 'ВЕЧІРНІ НОВИНИ · СПОРТ' },
+  { from: 472, to: 591, mode: 'black', osd: '22.11.1987  21:14' },                              // «Раптом… екран гасне»
+  { from: 591, to: 824, mode: 'mask', osd: '22.11.1987  21:14' },                               // «…зʼявляється він»
+  { from: 824, to: 939, mode: 'tv', osd: '22.11.1987  21:15', label: 'ВЕЧІРНІ НОВИНИ · СПОРТ' },
+  { from: 939, to: 1036, mode: 'black' },                                                      // «Але ніч…»
+  { from: 1036, to: 1203, mode: 'tv', osd: '22.11.1987  23:15', label: 'ДОКТОР ХТО · СЕРІЯ 1' },
+  { from: 1203, to: 1216, mode: 'black', osd: '22.11.1987  23:15' },
+  { from: 1216, to: 1495, mode: 'mask', osd: '22.11.1987  23:16' },                             // «Та сама маска»
+  { from: 1495, to: 1761, mode: 'towers' },
+  { from: 1761, to: 2249, mode: 'file' },
 ];
-export const HORROR_TOTAL = 2580; // 86s = voiceover + 1.7s hold
+export const HORROR_TOTAL = 2249; // ~75s = voiceover at 1.15× (73.3s) + 1.7s hold
 
 /** on-screen narration (Ukrainian). `*word*` = red accent */
 export const HORROR_CAPTIONS: { from: number; to: number; text: string }[] = [
-  { from: 2, to: 130, text: 'Цей ефір *так і не змогли* пояснити.' },
-  { from: 140, to: 355, text: 'Чикаго. Неділя, 22 листопада 1987 року.' },
-  { from: 355, to: 456, text: '*21:14.*' },
-  { from: 458, to: 541, text: 'Тисячі родин дивляться вечірні новини.' },
-  { from: 543, to: 645, text: 'Раптом… екран *гасне.*' },
-  { from: 646, to: 748, text: 'А потім… зʼявляється *він.*' },
-  { from: 750, to: 945, text: 'Гумова маска. Темні окуляри. Замість звуку — *гул.*' },
-  { from: 950, to: 1078, text: 'Інженери перемикають частоту. Він зникає.' },
-  { from: 1100, to: 1188, text: 'Але ніч… ще *не скінчилась.*' },
-  { from: 1195, to: 1380, text: 'Близько 23:15. Інший канал. Іде серія «Доктора Хто».' },
-  { from: 1405, to: 1550, text: 'Та сама маска. Тепер — *з голосом.*' },
-  { from: 1554, to: 1716, text: 'Півтори хвилини. Ніхто в студії *не може* його вимкнути.' },
-  { from: 1722, to: 1852, text: 'Сигнал перехопили потужним *мікрохвильовим* передавачем.' },
-  { from: 1853, to: 2022, text: 'Федеральна комісія звʼязку почала розслідування. Нікого *не знайшли.*' },
-  { from: 2030, to: 2350, text: 'Строк давності сплив у 1992-му. Хто був під маскою — *досі невідомо.*' },
-  { from: 2354, to: 2580, text: 'Можливо, вони досі дивляться телевізор. *Як і ти.*' },
+  { from: 2, to: 113, text: 'Цей ефір *так і не змогли* пояснити.' },
+  { from: 122, to: 309, text: 'Чикаго. Неділя, 22 листопада 1987 року.' },
+  { from: 309, to: 397, text: '*21:14.*' },
+  { from: 398, to: 470, text: 'Тисячі родин дивляться вечірні новини.' },
+  { from: 472, to: 561, text: 'Раптом… екран *гасне.*' },
+  { from: 562, to: 650, text: 'А потім… зʼявляється *він.*' },
+  { from: 652, to: 822, text: 'Гумова маска. Темні окуляри. Замість звуку — *гул.*' },
+  { from: 826, to: 937, text: 'Інженери перемикають частоту. Він зникає.' },
+  { from: 957, to: 1033, text: 'Але ніч… ще *не скінчилась.*' },
+  { from: 1039, to: 1200, text: 'Близько 23:15. Інший канал. Іде серія «Доктора Хто».' },
+  { from: 1222, to: 1348, text: 'Та сама маска. Тепер — *з голосом.*' },
+  { from: 1351, to: 1492, text: 'Півтори хвилини. Ніхто в студії *не може* його вимкнути.' },
+  { from: 1497, to: 1610, text: 'Сигнал перехопили потужним *мікрохвильовим* передавачем.' },
+  { from: 1611, to: 1758, text: 'Федеральна комісія звʼязку почала розслідування. Нікого *не знайшли.*' },
+  { from: 1765, to: 2043, text: 'Строк давності сплив у 1992-му. Хто був під маскою — *досі невідомо.*' },
+  { from: 2047, to: 2249, text: 'Можливо, вони досі дивляться телевізор. *Як і ти.*' },
 ];
 
 const SFX: { from: number; src: string; volume: number; dur?: number }[] = [
   { from: 0, src: 'horror/static.mp3', volume: 0.45 },
   { from: 2, src: 'horror/buzz.mp3', volume: 0.2, dur: 120 },
-  { from: 130, src: 'horror/static.mp3', volume: 0.3 },
-  { from: 543, src: 'horror/hit.mp3', volume: 0.7 },
-  { from: 680, src: 'horror/static.mp3', volume: 0.45 },
-  { from: 684, src: 'horror/buzz.mp3', volume: 0.18, dur: 120 },
-  { from: 804, src: 'horror/buzz.mp3', volume: 0.16, dur: 140 },
-  { from: 948, src: 'horror/static.mp3', volume: 0.4 },
-  { from: 1080, src: 'horror/hit.mp3', volume: 0.65 },
-  { from: 1191, src: 'horror/static.mp3', volume: 0.35 },
-  { from: 1383, src: 'horror/hit.mp3', volume: 0.75 },
-  { from: 1398, src: 'horror/static.mp3', volume: 0.45 },
-  { from: 1402, src: 'horror/garble.mp3', volume: 0.2, dur: 150 },
-  { from: 1552, src: 'horror/garble.mp3', volume: 0.16, dur: 160 },
-  { from: 1719, src: 'riser-cine.mp3', volume: 0.3 },
-  { from: 2025, src: 'impact-cine.mp3', volume: 0.55 },
-  { from: 2354, src: 'horror/static.mp3', volume: 0.25 },
+  { from: 113, src: 'horror/static.mp3', volume: 0.3 },
+  { from: 472, src: 'horror/hit.mp3', volume: 0.7 },
+  { from: 591, src: 'horror/static.mp3', volume: 0.45 },
+  { from: 595, src: 'horror/buzz.mp3', volume: 0.18, dur: 120 },
+  { from: 699, src: 'horror/buzz.mp3', volume: 0.16, dur: 140 },
+  { from: 824, src: 'horror/static.mp3', volume: 0.4 },
+  { from: 939, src: 'horror/hit.mp3', volume: 0.65 },
+  { from: 1036, src: 'horror/static.mp3', volume: 0.35 },
+  { from: 1203, src: 'horror/hit.mp3', volume: 0.75 },
+  { from: 1216, src: 'horror/static.mp3', volume: 0.45 },
+  { from: 1219, src: 'horror/garble.mp3', volume: 0.2, dur: 150 },
+  { from: 1350, src: 'horror/garble.mp3', volume: 0.16, dur: 160 },
+  { from: 1495, src: 'riser-cine.mp3', volume: 0.3 },
+  { from: 1761, src: 'impact-cine.mp3', volume: 0.55 },
+  { from: 2047, src: 'horror/static.mp3', volume: 0.25 },
 ];
 
 const C = { red: '#e0262b', paper: '#e9e4d8', green: '#bfffc2' };
@@ -251,7 +251,7 @@ const Caption: React.FC<{ text: string; from: number; to: number }> = ({ text, f
   const f = useCurrentFrame();
   // typewriter reveal, then hold, then cut
   // reveal roughly at speaking pace, never slower than 60% of the window
-  const chars = Math.floor(interpolate(f, [from, from + Math.min(text.length * 1.5, (to - from) * 0.6)], [0, text.length], clamp));
+  const chars = Math.floor(interpolate(f, [from, from + Math.min(text.length * 1.25, (to - from) * 0.6)], [0, text.length], clamp));
   const shown = text.replace(/\*/g, '');
   let count = 0;
   const parts = text.split(/(\*[^*]+\*)/).filter(Boolean).map((p, i) => {
@@ -326,8 +326,8 @@ export const MaxHorror: React.FC = () => {
           ▶ PLAY&nbsp;&nbsp;{scene.osd}
         </div>
       ) : null}
-      {f >= 2354 ? (
-        <div style={{ position: 'absolute', left: 70, right: 70, top: 1440, textAlign: 'center', fontFamily: MONO, fontSize: 24, color: '#8a8a8a', opacity: interpolate(f, [2354, 2370], [0, 1], clamp) }}>
+      {f >= 2047 ? (
+        <div style={{ position: 'absolute', left: 70, right: 70, top: 1440, textAlign: 'center', fontFamily: MONO, fontSize: 24, color: '#8a8a8a', opacity: interpolate(f, [2047, 2063], [0, 1], clamp) }}>
           Реальна подія. Джерела: UPI (24.11.1987), WGN-TV, WTTW News (2017)
         </div>
       ) : null}
