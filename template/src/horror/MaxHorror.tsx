@@ -115,7 +115,7 @@ const Tears: React.FC<{ strength: number }> = ({ strength }) => {
         const h = 8 + random(`h${f}-${i}`) * 70;
         const x = (random(`x${f}-${i}`) - 0.5) * 120 * strength;
         return (
-          <div key={i} style={{ position: 'absolute', left: x, top: y, width: HORROR_W, height: h, background: 'rgba(255,255,255,0.10)', backdropFilter: 'invert(0.15)', mixBlendMode: 'difference' }} />
+          <div key={i} style={{ position: 'absolute', left: x, top: y, width: HORROR_W, height: h, background: 'rgba(255,255,255,0.10)', mixBlendMode: 'difference' }} />
         );
       })}
     </>
@@ -129,7 +129,7 @@ const MaskFigure: React.FC = () => {
   const bob = Math.sin(f / 4) * 14;
   const jerk = random(`j${Math.floor(f / 3)}`) < 0.12 ? (random(`k${f}`) - 0.5) * 60 : 0;
   return (
-    <div style={{ position: 'absolute', left: 0, right: 0, top: 640, display: 'flex', justifyContent: 'center', filter: 'contrast(1.5) brightness(0.72) blur(0.7px)', transform: `translate(${jerk}px, ${bob}px) rotate(${sway}deg)`, transformOrigin: '50% 90%' }}>
+    <div style={{ position: 'absolute', left: 0, right: 0, top: 640, display: 'flex', justifyContent: 'center', filter: 'contrast(1.5) brightness(0.72)', transform: `translate(${jerk}px, ${bob}px) rotate(${sway}deg)`, transformOrigin: '50% 90%' }}>
       <svg width="640" height="860" viewBox="0 0 320 430">
         <defs>
           <linearGradient id="skin" x1="0" x2="1">
@@ -283,7 +283,10 @@ export const MaxHorror: React.FC = () => {
   // glitch strength: spikes at every scene change, constant hum while the mask is on air
   const cut = Math.min(...HORROR_SCENES.map((s) => Math.abs(f - s.from)));
   const glitch = Math.max(interpolate(cut, [0, 8], [1, 0], clamp), scene.mode === 'mask' ? 0.35 : 0);
-  const rgb = glitch * 14;
+  // RGB split only on cut spikes (drop-shadow on the full frame is the most
+  // expensive effect in software rendering, so it is skipped when idle)
+  const spike = interpolate(cut, [0, 8], [1, 0], clamp);
+  const rgb = spike * 14;
   const shake = glitch > 0.5 ? (random(`s${f}`) - 0.5) * 30 * glitch : 0;
   const flicker = scene.mode === 'mask' ? 0.85 + 0.15 * random(`fl${f}`) : 1;
 
@@ -299,7 +302,7 @@ export const MaxHorror: React.FC = () => {
       ))}
 
       {/* picture, with RGB split on glitch */}
-      <AbsoluteFill style={{ transform: `translateX(${shake}px)`, opacity: flicker, filter: `drop-shadow(${rgb}px 0 0 rgba(255,0,50,0.5)) drop-shadow(${-rgb}px 0 0 rgba(0,200,255,0.45))` }}>
+      <AbsoluteFill style={{ transform: `translateX(${shake}px)`, opacity: flicker, filter: rgb > 0.5 ? `drop-shadow(${rgb}px 0 0 rgba(255,0,50,0.5)) drop-shadow(${-rgb}px 0 0 rgba(0,200,255,0.45))` : undefined }}>
         {scene.mode === 'tv' && <NewsTV label={scene.label ?? ''} />}
         {scene.mode === 'mask' && (
           <>
