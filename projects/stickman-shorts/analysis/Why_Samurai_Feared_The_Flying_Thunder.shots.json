@@ -1,0 +1,443 @@
+{
+ "cuts": [
+  {
+   "frame": 25,
+   "t": 0.83,
+   "kind": "hard",
+   "strength": 1.088
+  },
+  {
+   "frame": 373,
+   "t": 12.43,
+   "kind": "hard",
+   "strength": 0.81
+  },
+  {
+   "frame": 473,
+   "t": 15.77,
+   "kind": "hard",
+   "strength": 0.844
+  },
+  {
+   "frame": 573,
+   "t": 19.1,
+   "kind": "soft/dissolve",
+   "strength": 0.404
+  },
+  {
+   "frame": 589,
+   "t": 19.63,
+   "kind": "hard",
+   "strength": 1.146
+  },
+  {
+   "frame": 969,
+   "t": 32.3,
+   "kind": "hard",
+   "strength": 0.645
+  },
+  {
+   "frame": 985,
+   "t": 32.83,
+   "kind": "hard",
+   "strength": 0.393
+  },
+  {
+   "frame": 1063,
+   "t": 35.43,
+   "kind": "hard",
+   "strength": 0.544
+  },
+  {
+   "frame": 1173,
+   "t": 39.1,
+   "kind": "hard",
+   "strength": 1.304
+  },
+  {
+   "frame": 1591,
+   "t": 53.03,
+   "kind": "hard",
+   "strength": 0.657
+  },
+  {
+   "frame": 1628,
+   "t": 54.27,
+   "kind": "hard",
+   "strength": 0.757
+  }
+ ],
+ "fades": [
+  {
+   "start": 18.0,
+   "end": 18.27,
+   "kind": "fade-out"
+  },
+  {
+   "start": 44.47,
+   "end": 44.93,
+   "kind": "fade-out"
+  },
+  {
+   "start": 57.5,
+   "end": 57.7,
+   "kind": "fade-in"
+  },
+  {
+   "start": 57.83,
+   "end": 58.07,
+   "kind": "fade-out"
+  }
+ ],
+ "flashes": [],
+ "shake": [
+  0.03,
+  0.4,
+  0.43,
+  0.63,
+  0.67,
+  0.7,
+  0.73,
+  0.8,
+  0.83,
+  0.87,
+  0.9,
+  0.93,
+  0.97,
+  1.0,
+  1.03,
+  1.07,
+  1.1,
+  1.13,
+  1.17,
+  1.23,
+  1.27,
+  1.33,
+  1.37,
+  1.5,
+  1.53,
+  1.57,
+  1.6,
+  1.63,
+  1.67,
+  1.7,
+  1.73,
+  1.77,
+  1.8,
+  1.83,
+  2.07,
+  2.2,
+  4.3,
+  4.37,
+  4.4,
+  4.43,
+  4.47,
+  4.5,
+  4.53,
+  4.57,
+  4.6,
+  4.63,
+  4.67,
+  4.7,
+  4.73,
+  4.77,
+  4.8,
+  4.83,
+  4.87,
+  4.9,
+  5.07,
+  5.1,
+  5.17,
+  5.2,
+  5.23,
+  5.27,
+  5.3,
+  6.13,
+  6.2,
+  6.23,
+  6.63,
+  6.67,
+  6.7,
+  6.73,
+  6.77,
+  9.03,
+  12.43,
+  15.77,
+  15.8,
+  18.17,
+  19.23,
+  19.27,
+  19.3,
+  19.63,
+  32.3,
+  32.33,
+  33.47,
+  33.53,
+  35.8,
+  35.83,
+  35.97,
+  36.07,
+  39.1,
+  39.8,
+  39.83,
+  39.9,
+  44.63,
+  44.67,
+  44.73,
+  44.8,
+  44.83,
+  44.87,
+  44.9,
+  44.97,
+  45.47,
+  45.5,
+  45.57,
+  45.67,
+  46.13,
+  46.83,
+  46.87,
+  46.9,
+  46.93,
+  47.07,
+  47.1,
+  47.13,
+  47.17,
+  47.43,
+  48.4,
+  48.43,
+  48.47,
+  48.5,
+  48.53,
+  48.57,
+  48.6,
+  48.63,
+  49.27,
+  49.3,
+  49.33,
+  49.37,
+  49.4,
+  49.43,
+  49.97,
+  50.0,
+  50.17,
+  51.17,
+  52.93,
+  52.97,
+  53.0,
+  53.03,
+  53.07,
+  53.5,
+  53.53,
+  53.57,
+  53.67,
+  53.7,
+  53.73,
+  53.77,
+  57.9
+ ],
+ "shots": [
+  {
+   "start": 0.0,
+   "end": 0.83,
+   "frames": 25,
+   "luma": 0.29,
+   "contrast": 0.153,
+   "sat": 0.34,
+   "camera": "pan",
+   "camera_breakdown": {
+    "pan": 15,
+    "roll": 4,
+    "tilt": 4,
+    "zoom-out": 1
+   },
+   "avg_motion_px": 4.85
+  },
+  {
+   "start": 0.83,
+   "end": 12.43,
+   "frames": 348,
+   "luma": 0.311,
+   "contrast": 0.155,
+   "sat": 0.337,
+   "camera": "static",
+   "camera_breakdown": {
+    "pan": 44,
+    "tilt": 117,
+    "zoom-in": 27,
+    "static": 120,
+    "roll": 13,
+    "zoom-out": 26
+   },
+   "avg_motion_px": 5.62
+  },
+  {
+   "start": 12.43,
+   "end": 15.77,
+   "frames": 100,
+   "luma": 0.362,
+   "contrast": 0.21,
+   "sat": 0.425,
+   "camera": "pan",
+   "camera_breakdown": {
+    "static": 2,
+    "zoom-in": 12,
+    "pan": 65,
+    "roll": 4,
+    "tilt": 1,
+    "zoom-out": 15
+   },
+   "avg_motion_px": 1.95
+  },
+  {
+   "start": 15.77,
+   "end": 19.1,
+   "frames": 100,
+   "luma": 0.364,
+   "contrast": 0.182,
+   "sat": 0.401,
+   "camera": "pan",
+   "camera_breakdown": {
+    "pan": 67,
+    "static": 19,
+    "zoom-in": 13
+   },
+   "avg_motion_px": 6.0
+  },
+  {
+   "start": 19.1,
+   "end": 19.63,
+   "frames": 16,
+   "luma": 0.323,
+   "contrast": 0.168,
+   "sat": 0.223,
+   "camera": "pan",
+   "camera_breakdown": {
+    "zoom-in": 3,
+    "zoom-out": 1,
+    "roll": 1,
+    "pan": 10
+   },
+   "avg_motion_px": 4.31
+  },
+  {
+   "start": 19.63,
+   "end": 32.3,
+   "frames": 380,
+   "luma": 0.309,
+   "contrast": 0.165,
+   "sat": 0.468,
+   "camera": "static",
+   "camera_breakdown": {
+    "pan": 70,
+    "zoom-in": 97,
+    "zoom-out": 8,
+    "static": 120,
+    "tilt": 78,
+    "roll": 6
+   },
+   "avg_motion_px": 1.31
+  },
+  {
+   "start": 32.3,
+   "end": 32.83,
+   "frames": 16,
+   "luma": 0.253,
+   "contrast": 0.171,
+   "sat": 0.351,
+   "camera": "zoom-in",
+   "camera_breakdown": {
+    "zoom-in": 14,
+    "static": 1
+   },
+   "avg_motion_px": 1.3
+  },
+  {
+   "start": 32.83,
+   "end": 35.43,
+   "frames": 78,
+   "luma": 0.255,
+   "contrast": 0.171,
+   "sat": 0.366,
+   "camera": "tilt",
+   "camera_breakdown": {
+    "zoom-in": 30,
+    "tilt": 35,
+    "zoom-out": 1,
+    "pan": 2,
+    "static": 9
+   },
+   "avg_motion_px": 3.15
+  },
+  {
+   "start": 35.43,
+   "end": 39.1,
+   "frames": 110,
+   "luma": 0.298,
+   "contrast": 0.208,
+   "sat": 0.374,
+   "camera": "zoom-in",
+   "camera_breakdown": {
+    "static": 15,
+    "zoom-in": 70,
+    "roll": 4,
+    "pan": 7,
+    "tilt": 9,
+    "zoom-out": 4
+   },
+   "avg_motion_px": 3.23
+  },
+  {
+   "start": 39.1,
+   "end": 53.03,
+   "frames": 418,
+   "luma": 0.236,
+   "contrast": 0.145,
+   "sat": 0.363,
+   "camera": "tilt",
+   "camera_breakdown": {
+    "static": 24,
+    "pan": 134,
+    "zoom-in": 75,
+    "tilt": 157,
+    "zoom-out": 12,
+    "roll": 15
+   },
+   "avg_motion_px": 5.38
+  },
+  {
+   "start": 53.03,
+   "end": 54.27,
+   "frames": 37,
+   "luma": 0.274,
+   "contrast": 0.127,
+   "sat": 0.265,
+   "camera": "zoom-out",
+   "camera_breakdown": {
+    "tilt": 7,
+    "pan": 11,
+    "roll": 4,
+    "zoom-out": 13,
+    "static": 1
+   },
+   "avg_motion_px": 4.95
+  },
+  {
+   "start": 54.27,
+   "end": 59.07,
+   "frames": 144,
+   "luma": 0.448,
+   "contrast": 0.184,
+   "sat": 0.306,
+   "camera": "tilt",
+   "camera_breakdown": {
+    "static": 36,
+    "tilt": 67,
+    "pan": 12,
+    "roll": 2,
+    "zoom-in": 19,
+    "zoom-out": 7
+   },
+   "avg_motion_px": 2.44
+  }
+ ]
+}

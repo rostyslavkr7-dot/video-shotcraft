@@ -1,0 +1,9 @@
+s13_road 0 48
+s13_road 48 96
+s13_road 96 127
+s14_chapel 0 48
+s14_chapel 48 96
+s14_chapel 96 124
+s15_autumn 0 48
+s15_autumn 48 96
+s15_autumn 96 140

@@ -1,0 +1,7 @@
+s05_crowd 0 48
+s05_crowd 48 96
+s05_crowd 96 144
+s05_crowd 144 186
+s07_council 0 48
+s07_council 48 96
+s07_council 96 143

@@ -1,0 +1,13 @@
+{ "fps": 30, "handle": 0.4, "end": 42.2,
+  "shots": [
+    {"id": "L01", "start": 0.00,  "end": 3.80,  "out": "whip"},
+    {"id": "L02", "start": 3.80,  "end": 7.30,  "out": "dissolve"},
+    {"id": "L03", "start": 7.30,  "end": 14.00, "out": "whip"},
+    {"id": "L04", "start": 14.00, "end": 17.90, "out": "dissolve"},
+    {"id": "L05", "start": 17.90, "end": 20.90, "out": "dissolve"},
+    {"id": "L06", "start": 20.90, "end": 24.30, "out": "dissolve"},
+    {"id": "L07", "start": 24.30, "end": 31.00, "out": "flash"},
+    {"id": "L08", "start": 31.00, "end": 33.00, "out": "whip"},
+    {"id": "L09", "start": 33.00, "end": 37.20, "out": "dissolve"},
+    {"id": "L10", "start": 37.20, "end": 42.20, "out": "end"}
+  ] }

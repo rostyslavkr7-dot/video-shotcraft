@@ -1,0 +1,16 @@
+s11_night 104 152
+s11_night 152 176
+s12_ban 41 89
+s12_ban 89 119
+s13_road 0 48
+s13_road 48 96
+s13_road 96 127
+s14_chapel 0 48
+s14_chapel 48 96
+s14_chapel 96 124
+s15_autumn 0 48
+s15_autumn 48 96
+s15_autumn 96 140
+s16_end 0 48
+s16_end 48 96
+s16_end 96 138

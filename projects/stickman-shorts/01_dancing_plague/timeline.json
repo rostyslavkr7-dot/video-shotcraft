@@ -1,0 +1,19 @@
+{ "fps": 30, "handle": 0.4, "end": 65.2,
+  "shots": [
+    {"id": "s01_aerial",  "start": 0.00,  "end": 4.02,  "out": "dissolve"},
+    {"id": "s02_door",    "start": 4.02,  "end": 7.16,  "out": "cut"},
+    {"id": "s03_start",   "start": 7.16,  "end": 9.44,  "out": "whip"},
+    {"id": "s04_days",    "start": 9.44,  "end": 15.28, "out": "dissolve"},
+    {"id": "s05_crowd",   "start": 15.28, "end": 20.68, "out": "whip"},
+    {"id": "s06_feet",    "start": 20.68, "end": 26.12, "out": "dissolve"},
+    {"id": "s07_council", "start": 26.12, "end": 30.10, "out": "cut"},
+    {"id": "s08_cure",    "start": 30.10, "end": 33.14, "out": "whip"},
+    {"id": "s09_stage",   "start": 33.14, "end": 38.68, "out": "dissolve"},
+    {"id": "s10_strong",  "start": 38.68, "end": 42.54, "out": "dissolve"},
+    {"id": "s11_night",   "start": 42.54, "end": 47.62, "out": "flash"},
+    {"id": "s12_ban",     "start": 47.62, "end": 50.78, "out": "whip"},
+    {"id": "s13_road",    "start": 50.78, "end": 54.20, "out": "dissolve"},
+    {"id": "s14_chapel",  "start": 54.20, "end": 57.54, "out": "dissolve"},
+    {"id": "s15_autumn",  "start": 57.54, "end": 61.40, "out": "dissolve"},
+    {"id": "s16_end",     "start": 61.40, "end": 65.20, "out": "end"}
+  ] }
