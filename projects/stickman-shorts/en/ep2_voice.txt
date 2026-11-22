@@ -1,0 +1,10 @@
+He uploaded his course guidelines, his advisor’s email and his old code to the AI — and didn’t ask it a single thing. He just closed the laptop.
+His thesis defense is in a week. Every day he opens a new chat and types one line: “Continue chapter three.”
+His roommate peeks over his shoulder: “What are you two, telepathic?”
+Every morning, the roommate pastes the same thing into the chat: who he is, his topic, the requirements, “write formally, no fluff.” Three pages. Every. Single. Time.
+By Friday, he’s pasted it forty times. On the forty-first, he forgets the last paragraph.
+And Claude cheerfully writes his thesis chapter like a social media post. With emojis.
+See, Claude has Projects. It’s a folder that sits in front of it in every chat inside that project: your files, plus instructions — who you are and how to answer you. Set it up once, and you never explain yourself again.
+Like a waiter who remembers you always order it without onions — instead of asking you every single night.
+So on Friday, one of them sends his advisor chapter three.
+And the other is explaining why his thesis opens with: “Hey guys, welcome back to my channel!”

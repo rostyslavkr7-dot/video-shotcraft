@@ -1,0 +1,11 @@
+Every thirty minutes, he threw away his entire conversation with the AI.
+His thesis is due in the morning. Claude is coding with him, everything finally works… and he copies five lines — and opens a brand-new, empty chat.
+His roommate nearly drops his pizza: “You just threw away three hours of work!”
+The roommate has been in the same chat since lunch. A thousand messages, the whole history right there — why start over?
+But by 2 a.m., his replies start crawling. And then: “Usage limit reached. Come back in five hours.”
+The thesis is due at eight.
+See, before every single reply, Claude rereads the entire chat from the very beginning. Imagine having to reread a whole book from page one before writing each new sentence.
+The longer the chat, the more of your limit every message eats.
+And those five lines? A summary: what’s done, and what’s next. Five lines instead of a thousand messages.
+So at eight a.m., one of them hands in his thesis.
+And the other is explaining to the committee that his AI ran out.
