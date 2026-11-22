@@ -15,6 +15,7 @@ for e in 1 2; do
   d=$S/claude_tips/en/ep$e; mkdir -p $d/assets
   cp "$HERE/03_claude_tips/compose_fx.py" "$HERE/03_claude_tips/mix.py" "$HERE/03_claude_tips/frames50.py" "$HERE/03_claude_tips/final50.sh" $d/
   cp "$HERE/en/ep${e}_timeline.json" $d/timeline.json
+  sed -i 's/language=rus/language=eng/' $d/final50.sh
   cp "$HERE/en/ep${e}_voice.mp3" $d/assets/voice.mp3; cp "$HERE/en/ep${e}_words.json" $d/assets/voice.words.json
   cp "$HERE/03_claude_tips/assets/Rubik.ttf" $d/assets/
   cp "$HERE/03_claude_tips/music/music_a.mp3" $d/assets/music.mp3
