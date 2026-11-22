@@ -1,0 +1,118 @@
+{
+ "fps": 30,
+ "handle": 0.4,
+ "end": 44.6,
+ "shots": [
+  {
+   "id": "L01",
+   "start": 0,
+   "end": 3.0,
+   "out": "whip"
+  },
+  {
+   "id": "L02",
+   "start": 3.0,
+   "end": 7.0,
+   "out": "dissolve"
+  },
+  {
+   "id": "L03",
+   "start": 7.0,
+   "end": 14.8,
+   "out": "whip"
+  },
+  {
+   "id": "L04",
+   "start": 14.8,
+   "end": 19.1,
+   "out": "dissolve"
+  },
+  {
+   "id": "L05",
+   "start": 19.1,
+   "end": 22.0,
+   "out": "dissolve"
+  },
+  {
+   "id": "L06",
+   "start": 22.0,
+   "end": 26.5,
+   "out": "dissolve"
+  },
+  {
+   "id": "L07",
+   "start": 26.5,
+   "end": 32.9,
+   "out": "flash"
+  },
+  {
+   "id": "L08",
+   "start": 32.9,
+   "end": 35.6,
+   "out": "whip"
+  },
+  {
+   "id": "L09",
+   "start": 35.6,
+   "end": 40.3,
+   "out": "dissolve"
+  },
+  {
+   "id": "L10",
+   "start": 40.3,
+   "end": 44.6,
+   "out": "end"
+  }
+ ],
+ "voice": "assets/voice.mp3",
+ "fx": {
+  "punch": [
+   "rich:",
+   "views.",
+   "thousand.",
+   "again.",
+   "Leo.",
+   "made.",
+   "viral.",
+   "truth.”",
+   "buzzing.",
+   "million",
+   "up.",
+   "videos."
+  ],
+  "shake": [
+   [
+    34.88,
+    1.6,
+    9
+   ],
+   [
+    10.952,
+    0.4,
+    14
+   ]
+  ],
+  "red": [
+   [
+    19.4,
+    1.6
+   ]
+  ],
+  "hum": [
+   19.1
+  ],
+  "swoosh": [
+   33.0
+  ],
+  "dust": [
+   "L08",
+   "L09",
+   "L10"
+  ],
+  "glint": [
+   "L02",
+   "L08"
+  ],
+  "sfx": []
+ }
+}

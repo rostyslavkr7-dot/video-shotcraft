@@ -1,0 +1,230 @@
+{
+ "fps": 30,
+ "handle": 0.4,
+ "end": 65.0,
+ "shots": [
+  {
+   "id": "s01_aerial",
+   "start": 0,
+   "end": 3.4,
+   "out": "dissolve"
+  },
+  {
+   "id": "s02_door",
+   "start": 3.4,
+   "end": 7.0,
+   "out": "cut"
+  },
+  {
+   "id": "s03_start",
+   "start": 7.0,
+   "end": 8.9,
+   "out": "whip"
+  },
+  {
+   "id": "s04_days",
+   "start": 8.9,
+   "end": 15.2,
+   "out": "dissolve"
+  },
+  {
+   "id": "s05_crowd",
+   "start": 15.2,
+   "end": 20.3,
+   "out": "whip"
+  },
+  {
+   "id": "s06_feet",
+   "start": 20.3,
+   "end": 25.4,
+   "out": "dissolve"
+  },
+  {
+   "id": "s07_council",
+   "start": 25.4,
+   "end": 29.7,
+   "out": "cut"
+  },
+  {
+   "id": "s08_cure",
+   "start": 29.7,
+   "end": 32.2,
+   "out": "whip"
+  },
+  {
+   "id": "s09_stage",
+   "start": 32.2,
+   "end": 38.4,
+   "out": "dissolve"
+  },
+  {
+   "id": "s10_strong",
+   "start": 38.4,
+   "end": 41.4,
+   "out": "dissolve"
+  },
+  {
+   "id": "s11_night",
+   "start": 41.4,
+   "end": 46.3,
+   "out": "flash"
+  },
+  {
+   "id": "s12_ban",
+   "start": 46.3,
+   "end": 50.3,
+   "out": "whip"
+  },
+  {
+   "id": "s13_road",
+   "start": 50.3,
+   "end": 54.1,
+   "out": "dissolve"
+  },
+  {
+   "id": "s14_chapel",
+   "start": 54.1,
+   "end": 57.9,
+   "out": "dissolve"
+  },
+  {
+   "id": "s15_autumn",
+   "start": 57.9,
+   "end": 61.2,
+   "out": "dissolve"
+  },
+  {
+   "id": "s16_end",
+   "start": 61.2,
+   "end": 65.0,
+   "out": "end"
+  }
+ ],
+ "voice": "assets/voice.mp3",
+ "fx": {
+  "punch": [
+   "1518.",
+   "dance.",
+   "hour.",
+   "day.",
+   "hundreds.",
+   "blood.”",
+   "more.",
+   "unbelievable.",
+   "banned.",
+   "vanishes."
+  ],
+  "shake": [
+   [
+    23.08,
+    0.55,
+    22
+   ],
+   [
+    49.6,
+    0.5,
+    18
+   ],
+   [
+    38.58,
+    0.3,
+    8
+   ]
+  ],
+  "red": [
+   [
+    28.68,
+    1.6
+   ]
+  ],
+  "hum": [
+   28.68
+  ],
+  "swoosh": [],
+  "dust": [
+   "s02_door",
+   "s03_start",
+   "s05_crowd",
+   "s06_feet",
+   "s09_stage",
+   "s10_strong",
+   "s13_road",
+   "s15_autumn"
+  ],
+  "glint": [],
+  "sfx": [
+   [
+    "/home/user/video-shotcraft/projects/stickman-shorts/01_dancing_plague/assets/audio_raw/door_1.mp3",
+    5.5200000000000005,
+    -6,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    "/home/user/video-shotcraft/projects/stickman-shorts/01_dancing_plague/assets/audio_raw/crowd_1.mp3",
+    15.5,
+    -20,
+    1.5,
+    1.0,
+    0,
+    11
+   ],
+   [
+    "/home/user/video-shotcraft/projects/stickman-shorts/01_dancing_plague/assets/audio_raw/crowd_1.mp3",
+    20.3,
+    -17,
+    0.2,
+    0.6,
+    0,
+    5.6
+   ],
+   [
+    "/home/user/video-shotcraft/projects/stickman-shorts/01_dancing_plague/assets/audio_raw/crowd_1.mp3",
+    32.3,
+    -19,
+    0.8,
+    0.4,
+    3,
+    14.0
+   ],
+   [
+    "/home/user/video-shotcraft/projects/stickman-shorts/01_dancing_plague/assets/audio_raw/thud_1.mp3",
+    23.08,
+    -4,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    "/home/user/video-shotcraft/projects/stickman-shorts/01_dancing_plague/assets/audio_raw/coins_1.mp3",
+    38.58,
+    -5,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    "/home/user/video-shotcraft/projects/stickman-shorts/01_dancing_plague/assets/audio_raw/bell_1.mp3",
+    52.0,
+    -8,
+    0,
+    1.5,
+    0,
+    0
+   ],
+   [
+    "/home/user/video-shotcraft/projects/stickman-shorts/01_dancing_plague/assets/audio_raw/bell_2.mp3",
+    56.4,
+    -12,
+    0,
+    1.5,
+    0,
+    0
+   ]
+  ]
+ }
+}
