@@ -4,11 +4,13 @@ The channel is broad: short stickman story-explainers on any topic (history, sci
 The name describes the FORMAT, not one topic. The AI-tips episodes become one recurring series inside it
 ("AI Roommates" as a playlist / series title).
 
+Chosen: **Stickstruck (@stickstruck)**. "Stick & Tell" was dropped: StickAndTellTV (~4.8K subs) already posts stick-figure history on YouTube.
+
 Checked 22.11.2026 — free on BOTH TikTok and YouTube (only registration confirms it, grab it soon):
 
 | Handle | Name | Why |
 |---|---|---|
-| **@stick.and.tell** ⭐ | Stick & Tell | pun on "show and tell": any topic, told with stick figures; short, friendly, memorable |
+| **@stickstruck** ⭐ | Stickstruck | pun on "show and tell": any topic, told with stick figures; short, friendly, memorable |
 | @stickstruck | Stickstruck | pun on "starstruck", pure brand, fits anything |
 | @two.minute.why | Two Minute Why | promise of the format: why something happened, explained fast |
 | @explainedinsticks.tv | Explained in Sticks | says exactly what the channel is |
@@ -20,7 +22,7 @@ whystories, sticksandstories, thewhyfiles, twistory, sketchystories and ~20 more
 Don't put "Claude" in the name: the channel isn't official.
 
 ## Profile
-**Name (≤30):** `Stick & Tell` or `Stick & Tell | Weird Stories`
+**Name (≤30):** `Stickstruck` or `Stickstruck | Weird Stories`
 
 **Bio (≤80):**
 1. `Weird history, smart hacks & true stories — told by stick figures ✏️` ⭐
