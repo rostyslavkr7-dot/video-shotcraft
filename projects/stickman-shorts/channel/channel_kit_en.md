@@ -10,7 +10,6 @@ Checked 22.11.2026 — free on BOTH TikTok and YouTube (only registration confir
 
 | Handle | Name | Why |
 |---|---|---|
-| **@thestickstruck** ⭐ | Stickstruck | pun on "show and tell": any topic, told with stick figures; short, friendly, memorable |
 | @thestickstruck | Stickstruck | pun on "starstruck", pure brand, fits anything |
 | @two.minute.why | Two Minute Why | promise of the format: why something happened, explained fast |
 | @explainedinsticks.tv | Explained in Sticks | says exactly what the channel is |
