@@ -32,6 +32,13 @@ for p in dancing:dancing_plague:01_dancing_plague/ai/clips lastvideo:last_video:
   cp "$HERE/03_claude_tips/assets/Rubik.ttf" $d/assets/
   ln -sfn "$HERE/$clips" $d/clips_v2
 done
+# AI Roommates ep3 "Subscriptions" (EN)
+d=$S/ep3; mkdir -p $d/assets
+cp "$HERE/03_claude_tips/compose_fx.py" "$HERE/03_claude_tips/mix.py" "$HERE/03_claude_tips/frames50.py" "$HERE/03_claude_tips/final50.sh" $d/
+sed -i 's/language=rus/language=eng/' $d/final50.sh
+cp "$HERE/05_subscriptions/timeline.json" $d/
+cp "$HERE/05_subscriptions/assets/voice.mp3" "$HERE/05_subscriptions/assets/voice.words.json" "$HERE/05_subscriptions/assets/music.mp3" "$HERE/03_claude_tips/assets/Rubik.ttf" $d/assets/
+ln -sfn "$HERE/05_subscriptions/clips_v2" $d/clips_v2
 pip install -q faster-whisper opencv-python-headless soundfile pillow numpy
 command -v ffmpeg >/dev/null || (apt-get update -qq && apt-get install -y -qq ffmpeg)
 echo "restored to $S"
