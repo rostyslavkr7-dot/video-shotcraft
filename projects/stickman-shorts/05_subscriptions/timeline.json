@@ -1,17 +1,118 @@
 {
-  "fps": 30, "handle": 0.4, "end": 65.0, "voice": "assets/voice.mp3",
-  "fx": {"punch": ["again.", "little!\"", "by.", "shows.", "made.", "that.", "renewed.\""],
-         "shake": [[41.0, 0.5, 10]], "red": [], "hum": [], "swoosh": [],
-         "dust": ["F01", "F05"], "glint": ["F05", "F07"]},
-  "shots": [
-    {"id": "F01", "start": 0, "end": 8.4, "out": "whip", "line": "moves $60… never touches it"},
-    {"id": "F02", "start": 8.4, "end": 12.9, "out": "whip", "line": "Live a little!"},
-    {"id": "F03", "start": 12.9, "end": 24.5, "out": "flash", "line": "nine subscriptions"},
-    {"id": "F04", "start": 24.5, "end": 31.4, "out": "dissolve", "line": "ten years go by, $7,200"},
-    {"id": "F05", "start": 31.4, "end": 40.4, "out": "whip", "line": "index fund = basket"},
-    {"id": "F06", "start": 40.4, "end": 46.5, "out": "flash", "line": "snowball downhill"},
-    {"id": "F05b", "start": 46.5, "end": 54.0, "out": "whip", "line": "7,200 in, ~10,400 out"},
-    {"id": "F07", "start": 54.0, "end": 59.3, "out": "cut", "line": "trip around the world"},
-    {"id": "F08", "start": 59.3, "end": 65.0, "out": "end", "line": "membership renewed"}
+ "fps": 30,
+ "handle": 0.4,
+ "end": 65.0,
+ "voice": "assets/voice.mp3",
+ "fx": {
+  "punch": [
+   "again.",
+   "little!\"",
+   "by.",
+   "shows.",
+   "made.",
+   "that.",
+   "renewed.\""
+  ],
+  "shake": [
+   [
+    41.0,
+    0.5,
+    10
+   ]
+  ],
+  "red": [],
+  "hum": [],
+  "swoosh": [],
+  "dust": [
+   "F01",
+   "F05"
+  ],
+  "glint": [
+   "F05",
+   "F07"
   ]
+ },
+ "shots": [
+  {
+   "id": "F01",
+   "start": 0,
+   "end": 8.4,
+   "out": "whip",
+   "line": "moves $60… never touches it",
+   "gen_secs": 8,
+   "model": "ltx"
+  },
+  {
+   "id": "F02",
+   "start": 8.4,
+   "end": 12.9,
+   "out": "whip",
+   "line": "Live a little!",
+   "gen_secs": 5,
+   "model": "kling"
+  },
+  {
+   "id": "F03",
+   "start": 12.9,
+   "end": 24.5,
+   "out": "flash",
+   "line": "nine subscriptions",
+   "gen_secs": 10,
+   "model": "ltx"
+  },
+  {
+   "id": "F04",
+   "start": 24.5,
+   "end": 31.4,
+   "out": "dissolve",
+   "line": "ten years go by, $7,200",
+   "gen_secs": 6,
+   "model": "ltx"
+  },
+  {
+   "id": "F05",
+   "start": 31.4,
+   "end": 40.4,
+   "out": "whip",
+   "line": "index fund = basket",
+   "gen_secs": 8,
+   "model": "ltx"
+  },
+  {
+   "id": "F06",
+   "start": 40.4,
+   "end": 46.5,
+   "out": "flash",
+   "line": "snowball downhill",
+   "gen_secs": 6,
+   "model": "ltx"
+  },
+  {
+   "id": "F05b",
+   "start": 46.5,
+   "end": 54.0,
+   "out": "whip",
+   "line": "7,200 in, ~10,400 out",
+   "gen_secs": 6,
+   "model": "ltx"
+  },
+  {
+   "id": "F07",
+   "start": 54.0,
+   "end": 59.3,
+   "out": "cut",
+   "line": "trip around the world",
+   "gen_secs": 6,
+   "model": "ltx"
+  },
+  {
+   "id": "F08",
+   "start": 59.3,
+   "end": 65.0,
+   "out": "end",
+   "line": "membership renewed",
+   "gen_secs": 5,
+   "model": "kling"
+  }
+ ]
 }

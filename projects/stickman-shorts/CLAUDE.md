@@ -45,7 +45,8 @@ sh final50.sh <name>         # compose_fx.py (captions, transitions) + mux -> ou
   Kling only for 1–2 key shots where LTX breaks the character (ep1: C02 on Kling, 5 s, 24 fps).
   Each shot in `timeline.json` records `model` (`ltx`/`kling`) and `gen_secs`.
   Seedance 2.5 Flash was tried and rejected: not smooth and pricier (~852 credits/s).
-  Budget: ~15–17k credits for a one-minute video (stills + clips + voice). Confirm the clip batch cost before running.
+  Budget at 23.11.2026 prices: ~19k credits for a one-minute video (8 stills ~1.7k + voice ~1.1k +
+  ~50 s of LTX ~12k + 2 Kling ~4.2k). The older ~15–17k figure predates these prices. Confirm the clip batch cost before running.
   Prices measured 23.11.2026: LTX-2 Fast ~242 credits/s (same at 25 and 50 fps), Kling 2.6 Pro 5 s = ~2,121.
   Keep `gen_secs` tight (frames50.py slows a short clip with interpolation), it is the main cost lever.
 - Dancing Plague 1518 and The Last Video clips came from an older ElevenLabs account; the model wasn't recorded.
