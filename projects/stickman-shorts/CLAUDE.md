@@ -63,8 +63,11 @@ sh final50.sh <name>         # compose_fx.py (captions, transitions) + mux -> ou
 - Settings: Education, Altered/synthetic content = Yes, not for kids. Playlists: Weird History, AI Roommates.
 - One video a day, 14:00–16:00 Berlin. TikTok must stay a personal account (Creator Rewards).
 
-## Status (22.11.2026)
+## Status (23.11.2026)
 - Dancing Plague 1518 (EN): uploaded, scheduled for 23.11.2026 15:00 Berlin.
 - The Last Video, AI Roommates ep1, ep2 (EN): copy ready, not yet uploaded.
-- Open: brand avatar/logo (the current avatar shows the AI-series hero); next episodes (AI Roommates ep3,
-  Weird History topics from `analysis/REPORT.md`).
+- AI Roommates ep3 "Subscriptions" (EN, `05_subscriptions/`): rendered 23.11, 65 s, `/home/user/shorts/ep3/out/subscriptions_en_50fps.mp4`
+  (104 MB, over GitHub's 100 MB limit, so not committed: rebuild with restore.sh + frames50.py + mix.py + final50.sh).
+  Cost ~19.2k credits. Copy in `channel/youtube_posts.md`. New in compose_fx: `fx.counters` / `fx.notes` overlays.
+  F08's Kling clip turned the bell into fake text; `05_subscriptions/patch_bubble.py` repairs it.
+- Open: brand avatar/logo (the current avatar shows the AI-series hero); next episodes (Weird History topics from `analysis/REPORT.md`).

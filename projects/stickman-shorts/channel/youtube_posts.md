@@ -25,5 +25,13 @@ Description: Every morning his roommate pasted 3 pages into the AI: who he is, h
 Hashtags: #shorts #ai #claude #aitips #productivity #studytips #college #thesis
 Tags: claude ai, claude projects, claude tips, ai tips, ai hacks, custom instructions, how to use claude, chatgpt tips, ai for students, study tips, thesis writing, productivity hacks, college life, stick figure animation
 
+## AI Roommates ep3 "Subscriptions"
+Title: He Skipped Every Subscription for 10 Years. Here's What He Got #shorts
+Description: Every month he moved $60 somewhere and never touched it. His roommate had nine subscriptions — three streaming services, a gym he went to twice, and an app that reminds him to drink water. Same $60 a month. / Ten years later: $7,200 gone on subscriptions… vs about $10,400 in an index fund (at a 7% average yearly return — never guaranteed). / Which roommate are you? 👇 / Not financial advice. Just a story about small habits.
+Hashtags: #shorts #money #personalfinance #investing #subscriptions #moneytips #college #animation
+Tags: subscriptions, index fund, compound interest, personal finance, money tips, saving money, investing for beginners, college life, roommates, money habits, stick figure animation, animated story
+TikTok caption: He skipped every subscription for 10 years. His roommate didn't 💀 #money #personalfinance #investing #moneytips #college (not financial advice)
+On-cover text: `$7,200 vs $10,400`
+
 Settings: category Education (27), Altered/synthetic content = Yes, Made for kids = No, language English, no location.
 Playlists: Weird History, AI Roommates. Post 14:00–16:00 Berlin.
