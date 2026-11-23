@@ -30,6 +30,69 @@
   "glint": [
    "F05",
    "F07"
+  ],
+  "counters": [
+   {
+    "label": "SUBSCRIPTIONS",
+    "color": [
+     255,
+     90,
+     90
+    ],
+    "show": [
+     24.5,
+     59.3
+    ],
+    "keys": [
+     [
+      24.6,
+      0
+     ],
+     [
+      27.9,
+      7200
+     ]
+    ]
+   },
+   {
+    "label": "INVESTED",
+    "color": [
+     110,
+     230,
+     140
+    ],
+    "show": [
+     31.4,
+     59.3
+    ],
+    "keys": [
+     [
+      31.4,
+      0
+     ],
+     [
+      47.5,
+      7200
+     ],
+     [
+      48.7,
+      7200
+     ],
+     [
+      50.4,
+      10400
+     ]
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "text": "Not financial advice. Returns aren't guaranteed.",
+    "show": [
+     46.5,
+     54.0
+    ]
+   }
   ]
  },
  "shots": [

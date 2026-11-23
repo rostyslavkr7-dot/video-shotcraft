@@ -1,1 +1,23 @@
-{"flow":"RaLRDGJLazQkOuzEFOu8","voice":"WxOuL8bdqu5MQYcsYyS5","F01":"z4wqimv1Qj39rrh9NCKU","F02":"1WE2RilqI8GejQIHjNe8","F03":"O23rrT1ECRjcWEM2NIL4","F04":"IpprHYWRTa3jf36WX4SJ","F05":"ApoZQU5sXQCyaQ2b4PfH","F06":"TGNKAgLhv24kaAJ5DULF","F07":"epugStTarLt4C0J7p73s","F08":"e0mf8VVuZyKIg0viwZYv"}
+{
+ "flow": "RaLRDGJLazQkOuzEFOu8",
+ "voice": "WxOuL8bdqu5MQYcsYyS5",
+ "F01": "z4wqimv1Qj39rrh9NCKU",
+ "F02": "1WE2RilqI8GejQIHjNe8",
+ "F03": "O23rrT1ECRjcWEM2NIL4",
+ "F04": "IpprHYWRTa3jf36WX4SJ",
+ "F05": "ApoZQU5sXQCyaQ2b4PfH",
+ "F06": "TGNKAgLhv24kaAJ5DULF",
+ "F07": "epugStTarLt4C0J7p73s",
+ "F08": "e0mf8VVuZyKIg0viwZYv",
+ "clips": {
+  "F01": "q0AIwvArPbD7IEk356OB",
+  "F02": "s027IBRoTfsJgwAJmsNb",
+  "F03": "eWZU1L0gQXGn3QputiCC",
+  "F04": "I1g58LQHOH3D04mQJEdh",
+  "F05": "nCqmJ1X6tqvjNjREyHjG",
+  "F05b": "kbKiRuGhoqN5IoX09Q0O",
+  "F06": "2OVQT8YsPzqcfjNTwWGp",
+  "F07": "P6Uk0RnfeHJjsfX7NLec",
+  "F08": "57MtgDw7CjpHw0pI9xnq (bell turned into fake text after ~2.5 s: clips_v2/F08.mp4 is patched by patch_bubble.py from F08_raw.mp4)"
+ }
+}

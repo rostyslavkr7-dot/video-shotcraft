@@ -226,6 +226,49 @@ def caption(img, T):
     pil.paste(layer, (0, int(H * 0.60) - 200), layer)
     return np.asarray(pil)[:, :, ::-1]
 
+# ---------- counters / notes (optional: fx.counters, fx.notes) ----------
+COUNTERS = FX.get('counters', [])
+NOTES = FX.get('notes', [])
+def _ui_font(size, var='ExtraBold'):
+    f = ImageFont.truetype(f'{ROOT}/assets/Rubik.ttf', size)
+    try: f.set_variation_by_name(var)
+    except Exception: pass
+    return f
+F_LBL, F_VAL, F_NOTE = _ui_font(38, 'Bold'), _ui_font(72), _ui_font(30, "Medium")
+
+def _counter_value(keys, T):
+    if T <= keys[0][0]: return keys[0][1]
+    for (t0, v0), (t1, v1) in zip(keys, keys[1:]):
+        if T < t1:
+            k = (T - t0) / (t1 - t0); k = k * k * (3 - 2 * k)
+            return v0 + (v1 - v0) * k
+    return keys[-1][1]
+
+def overlays(img, T):
+    live = [c for c in COUNTERS if c['show'][0] <= T < c['show'][1]]
+    notes = [n for n in NOTES if n['show'][0] <= T < n['show'][1]]
+    if not live and not notes: return img
+    pil = Image.fromarray(np.clip(img, 0, 255).astype(np.uint8)[:, :, ::-1]).convert('RGBA')
+    layer = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(layer)
+    y = 210
+    for c in live:
+        a = min(1.0, (T - c['show'][0]) / 0.25, (c['show'][1] - T) / 0.25)
+        val = _counter_value(c['keys'], T)
+        txt = c.get('prefix', '$') + f"{int(round(val)):,}"
+        col = tuple(c['color'])
+        d.rounded_rectangle((170, y, W - 170, y + 104), 28, fill=(12, 12, 16, int(170 * a)), outline=col + (int(230 * a),), width=4)
+        d.text((205, y + 52), c['label'], font=F_LBL, fill=(235, 235, 235, int(255 * a)), anchor='lm')
+        d.text((W - 205, y + 52), txt, font=F_VAL, fill=col + (int(255 * a),), anchor='rm',
+               stroke_width=4, stroke_fill=(10, 10, 12, int(255 * a)))
+        y += 120
+    for n in notes:
+        a = min(1.0, (T - n['show'][0]) / 0.25, (n['show'][1] - T) / 0.25)
+        bb = d.textbbox((W / 2, y + 22), n['text'], font=F_NOTE, anchor='mm')
+        d.rounded_rectangle((bb[0] - 20, bb[1] - 10, bb[2] + 20, bb[3] + 12), 18, fill=(12, 12, 16, int(150 * a)))
+        d.text((W / 2, y + 22), n['text'], font=F_NOTE, fill=(235, 235, 235, int(235 * a)), anchor='mm')
+    pil.alpha_composite(layer)
+    return np.asarray(pil.convert('RGB'))[:, :, ::-1].astype(np.float32)
+
 # ---------- render video ----------
 out = f"{ROOT}/out/{'preview' if PREVIEW else OUTNAME}.mp4"
 os.makedirs(f'{ROOT}/out', exist_ok=True)
@@ -236,6 +279,7 @@ for n in range(n0, n1):
     T = n / FPS
     img = frame_at(T)
     img = apply_fx(np.clip(img, 0, 255), T, n)
+    img = overlays(img, T)
     img = caption(img, T)
     ff.stdin.write(np.clip(img, 0, 255).astype(np.uint8).tobytes())
     if n % (5 * FPS) == 0: print(f'{T:.1f}s', flush=True)
