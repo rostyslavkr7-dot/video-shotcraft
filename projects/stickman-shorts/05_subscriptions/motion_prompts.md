@@ -1,6 +1,7 @@
-# Ep3 "Subscriptions": motion prompts for Seedance 2.5 Flash
+# Ep3 "Subscriptions": motion prompts (LTX-2 Fast, Kling for F02/F08)
 
-Settings: **9:16, 720p, sound off**. Start frame = `frames/F0X.png` (1440×2560).
+Generated in ElevenLabs flow `RaLRDGJLazQkOuzEFOu8` (video nodes "V F0X"), start frame = the F0X still.
+LTX: 50 fps, 1080p, audio off (max 10 s at 50 fps). Kling 2.6 Pro: 9:16, 5 s, audio off.
 End every prompt with: *Keep the exact 2D stickman art style and character look, no text, no morphing, smooth cinematic motion.*
 F05b reuses the F05 still (no new image credits).
 
@@ -19,4 +20,4 @@ F05b reuses the F05 still (no new image credits).
 ## Timeline (voice `assets/voice.mp3`, 62.8 s, video 65.0 s)
 F01 0.0–8.4 · F02 8.4–12.9 · F03 12.9–24.5 · F04 24.5–31.4 · F05 31.4–40.4 · F06 40.4–46.5 · F05b 46.5–54.0 · F07 54.0–59.3 · F08 59.3–65.0
 
-Drop finished clips named `F01 … F08` (plus `F05b`).
+Downloaded clips go to `clips_v2/F01.mp4 … F08.mp4` (plus `F05b.mp4`).
