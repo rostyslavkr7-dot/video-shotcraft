@@ -57,3 +57,13 @@ stick-figure "storyteller" mascot or a simple logo mark fits better (can generat
 `He never explained himself to the AI. It still knew everything 🤯 #ai #claude #aitips #productivity #studytok #college`
 
 On-cover text (2–4 words, add in the TikTok editor): ep 1 — `USAGE LIMIT REACHED`, ep 2 — `IT REMEMBERS EVERYTHING`.
+
+## Instagram
+**Name (≤30, searchable):** `Stickstruck | Weird Stories`
+
+**Bio (≤150):**
+1. `Weird history, smart hacks & true stories — told by stick figures ✏️` / `New short every day 👇` ⭐
+2. `The strangest stories, explained in 60 seconds ⏱️` / `History · Money · AI — in stick figures ✏️`
+3. `Why things happened & how they work — in stick figures ✏️` / `1 short a day. Which story is next? 👇`
+
+Link: the YouTube channel (or a link page with YouTube + TikTok). Mark Reels as AI-made ("AI info" label).
